@@ -32,7 +32,7 @@ ENV NODE_OPTIONS="--max-old-space-size=4096"
 RUN npm install -g yo generator-code
 
 # wit2ts tool for generating typescript bindings
-RUN npm install -g @vscode/wasm-component-model
+# RUN npm install -g @vscode/wasm-component-model
 
 
 # Create a developer user
@@ -45,8 +45,10 @@ WORKDIR /home/developer
 
 # Install Rust, and essential WASM tools
 # https://github.com/microsoft/vscode-wasm/issues/220
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain 1.82.0
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y 
+# --default-toolchain 1.82.0
 ENV PATH=/home/developer/.cargo/bin:$PATH
-RUN rustup target add wasm32-unknown-unknown
-RUN cargo install --locked wasm-tools@1.220.0
-RUN cargo install wit-bindgen-cli
+# https://blog.rust-lang.org/2024/04/09/updates-to-rusts-wasi-targets/
+RUN rustup target add wasm32-wasip1
+# RUN cargo install --locked wasm-tools@1.220.0
+#CRUN cargo install wit-bindgen-cli

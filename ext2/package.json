@@ -4,21 +4,19 @@
   "description": "..",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.99.0"
+    "vscode": "^1.100.0"
   },
   "categories": [
     "Other"
-  ],
-  "extensionDependencies": [
-    "ms-vscode.wasm-wasi-core"
   ],
   "activationEvents": [],
   "browser": "./dist/web/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "ext2.wasm-component-model.run",
-        "title": "Calculator"
+         "command": "ext2.run",
+          "category": "WASM Example",
+          "title": "Run Rust Hello World"
       }
     ]
   },
@@ -36,24 +34,25 @@
     "run-in-browser": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. ."
   },
   "devDependencies": {
-    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
-    "@types/assert": "^1.5.11",
+    "@types/vscode": "^1.100.0",
     "@types/mocha": "^10.0.10",
-    "@types/vscode": "^1.99.0",
-    "@types/node": "^20",
-    "@typescript-eslint/eslint-plugin": "^8.28.0",
-    "@typescript-eslint/parser": "^8.28.0",
-    "@vscode/test-web": "^0.0.68",
-    "assert": "^2.1.0",
-    "esbuild": "^0.25.1",
-    "eslint": "^9.23.0",
-    "glob": "^11.0.1",
+    "@types/assert": "^1.5.11",
+    "eslint": "^9.25.1",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
     "mocha": "^11.1.0",
+    "typescript": "^5.8.3",
+    "@vscode/test-web": "^0.0.69",
+    "esbuild": "^0.25.3",
+    "glob": "^11.0.2",
     "npm-run-all": "^4.1.5",
-    "typescript": "^5.8.2"
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "assert": "^2.1.0"
   },
-  "dependencies": {
-    "@vscode/wasm-component-model": "^1.0.1",
-    "@vscode/wasm-wasi": "0.11.0-next.0"
-  }
+   "extensionDependencies": [
+        "ms-vscode.wasm-wasi-core"
+    ],
+     "dependencies": {
+        "@vscode/wasm-wasi": "^1.0.1"
+    }
 }

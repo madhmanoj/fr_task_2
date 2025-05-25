@@ -2,5 +2,5 @@ vscode/
 ext2/target/
 ext2/node_modules/
 ext2/dist/
-wasm_calculator/target/
-extension/
+hello_world/
+vscode-wasm/
