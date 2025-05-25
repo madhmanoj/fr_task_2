@@ -3,4 +3,5 @@ ext2/target/
 ext2/node_modules/
 ext2/dist/
 hello_world/
-vscode-wasm/
+wasm-wasi-core/node_modules
+wasm-wasi-core/dist
