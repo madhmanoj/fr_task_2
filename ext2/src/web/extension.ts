@@ -19,7 +19,7 @@ export async function activate(context: vscode.ExtensionContext) {
 			vscode.Uri.joinPath(
 				context.extensionUri,
 				"target",
-				"wasm32-wasi",
+				"wasm32-wasip1",
 				"debug",
 				"hello_world.wasm"
 			)
