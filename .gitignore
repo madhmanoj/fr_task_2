@@ -2,6 +2,6 @@ vscode/
 ext2/target/
 ext2/node_modules/
 ext2/dist/
-hello_world/
+hello_world/target
 wasm-wasi-core/node_modules
 wasm-wasi-core/dist
