@@ -35,6 +35,7 @@ npm run compile-web
 cd ..
 
 ./vscode/scripts/code-web.sh \
+    --coi \
     --host 0.0.0.0 \
     --extensionDevelopmentPath=/workspaces/fr_task_2/ext2 \
     --extensionPath=/workspaces/fr_task_2/wasm-wasi-core 
